@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import Nav from './components/Nav'
 import './App.css';
 
 function App() {
+  let state = {
+    buttons: [
+        {
+            id: 1,
+            name: 'nav1',
+            img: null,
+            altText: 'nav1 alt',
+            link: '#',
+        }, 
+        {
+            id: 2,
+            name: 'nav2',
+            img: null,
+            altText: 'nav alt',
+            link: '#',
+        }, 
+        {
+            id: 3,
+            name: 'nav3',
+            img: null,
+            altText: 'nav3 alt',
+            link: '#',
+        }, 
+    ]
+}
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div class='hexHolder'>
+          <Nav nav={state.buttons} />
+        </div>
+        
       </header>
+      Hello
     </div>
   );
 }
