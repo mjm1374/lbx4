@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './components/layouts/header'
 import Nav from './components/Nav'
 import './App.css';
 
@@ -35,17 +36,24 @@ class App extends Component {
 
 loadSection = (id) => {
   console.log(id);
+  this.setState({buttons: this.state.buttons.map(button => {
+    (button.id === id) ? button.active = true : button.active = false;
+    return button
+  }
+  
+  )})
 }
 
 render(){
   return (
     <div className="App">
-      <header className="App-header">
+    <Header />
+      <nav className="App-header">
         <div className='hexHolder'>
           <Nav nav={this.state.buttons} loadSection={this.loadSection} />
         </div>
         
-      </header>
+      </nav>
       Hello
     </div>
   );
