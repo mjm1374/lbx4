@@ -10,13 +10,10 @@ export class NavItem extends Component {
         }
     }
 
-    loadSection = (name) => {
-        console.log(this.props, this.props.button.name)
-    }
-
     render() {
+        const { id, name, active } = this.props.button;
         return (
-            <div className='hex' style={this.getStyle()} onClick={this.loadSection}>{this.props.button.name}</div>
+            <div className='hex' style={this.getStyle()} onClick={this.props.loadSection.bind(this, id)}>{name}</div>
         )
     }
 }

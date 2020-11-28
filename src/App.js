@@ -1,8 +1,9 @@
+import React, { Component } from 'react';
 import Nav from './components/Nav'
 import './App.css';
 
-function App() {
-  let state = {
+class App extends Component {
+  state = {
     buttons: [
         {
             id: 1,
@@ -31,17 +32,24 @@ function App() {
     ]
 }
 
+
+loadSection = (id) => {
+  console.log(id);
+}
+
+render(){
   return (
     <div className="App">
       <header className="App-header">
         <div className='hexHolder'>
-          <Nav nav={state.buttons} />
+          <Nav nav={this.state.buttons} loadSection={this.loadSection} />
         </div>
         
       </header>
       Hello
     </div>
   );
+}
 }
 
 export default App;

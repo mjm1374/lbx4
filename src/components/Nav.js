@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 class Nav extends Component {
 
     render() {
- 
+
         return  this.props.nav.map((button) => (
-            <NavItem key={button.id} button={button} />
+            <NavItem key={button.id} button={button} loadSection={this.props.loadSection} />
         ))
     }
 }
