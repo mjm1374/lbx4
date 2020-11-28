@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Header from './components/layouts/header'
 import Nav from './components/Nav'
+import {v4 as uuid} from 'uuid'
 import './App.css';
 
 class App extends Component {
   state = {
     buttons: [
         {
-            id: 1,
+            id: uuid(),
             name: 'nav1',
             img: null,
             altText: 'nav1 alt',
@@ -15,7 +16,7 @@ class App extends Component {
             active: false,
         }, 
         {
-            id: 2,
+            id: uuid(),
             name: 'nav2',
             img: null,
             altText: 'nav alt',
@@ -23,7 +24,7 @@ class App extends Component {
             active: true,
         }, 
         {
-            id: 3,
+            id: uuid(),
             name: 'nav3',
             img: null,
             altText: 'nav3 alt',
