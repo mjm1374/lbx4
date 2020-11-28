@@ -26,6 +26,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.hex:hover{
+    background-color: #0f0;
 }
 
 .hex:after {

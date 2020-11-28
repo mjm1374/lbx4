@@ -10,6 +10,7 @@ function App() {
             img: null,
             altText: 'nav1 alt',
             link: '#',
+            active: false,
         }, 
         {
             id: 2,
@@ -17,6 +18,7 @@ function App() {
             img: null,
             altText: 'nav alt',
             link: '#',
+            active: true,
         }, 
         {
             id: 3,
@@ -24,6 +26,7 @@ function App() {
             img: null,
             altText: 'nav3 alt',
             link: '#',
+            active: false,
         }, 
     ]
 }
@@ -31,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div class='hexHolder'>
+        <div className='hexHolder'>
           <Nav nav={state.buttons} />
         </div>
         
