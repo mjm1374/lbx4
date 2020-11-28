@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './NavItem.css'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 export class NavItem extends Component {
     
@@ -11,9 +12,9 @@ export class NavItem extends Component {
     }
 
     render() {
-        const { id, name, active } = this.props.button;
+        const { id, name, active, link } = this.props.button;
         return (
-            <div className='hex' style={this.getStyle()} onClick={this.props.loadSection.bind(this, id)}>{name}</div>
+            <Link to={link}> <div className='hex' style={this.getStyle()} onClick={this.props.loadSection.bind(this, id)}>{name}</div></Link>
         )
     }
 }
